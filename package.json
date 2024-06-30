@@ -3,22 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
+    "predev": "stylex --config ./.stylex.json5",
+    "dev": "stylex --config ./.stylex.json5 -w & next dev",
+    "prestart": "stylex --config ./.stylex.json5 && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@stylexjs/stylex": "0.7.4",
+    "next": "15.0.0-rc.0",
     "react": "19.0.0-rc-f994737d14-20240522",
-    "react-dom": "19.0.0-rc-f994737d14-20240522",
-    "next": "15.0.0-rc.0"
+    "react-dom": "19.0.0-rc-f994737d14-20240522"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@babel/preset-typescript": "^7.24.7",
+    "@stylexjs/babel-plugin": "0.7.4",
+    "@stylexjs/cli": "0.7.4",
+    "@stylexjs/eslint-plugin": "0.7.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "15.0.0-rc.0"
+    "eslint-config-next": "15.0.0-rc.0",
+    "typescript": "^5",
+    "yargs": "^17.7.2"
   }
 }
