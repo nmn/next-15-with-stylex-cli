@@ -7,11 +7,11 @@ import { colors } from "./tokens.stylex";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  variable: "--geist-sans",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+  variable: "--geist-mono",
 });
 
 export const metadata: Metadata = {

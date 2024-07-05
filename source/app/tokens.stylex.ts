@@ -29,6 +29,6 @@ export const colors = stylex.defineVars({
 
 // The fonts will be loaded by `next/font`.
 export const fonts = stylex.defineVars({
-  "--font-geist-sans": "sans-serif",
-  "--font-geist-mono": "Courier New, monospace",
+  "--geist-sans": "sans-serif",
+  "--geist-mono": "Courier New, monospace",
 });

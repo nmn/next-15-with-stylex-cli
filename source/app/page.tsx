@@ -14,18 +14,18 @@ export default function Home() {
           height={38}
           priority
         />
-        <ol {...stylex.props(styles.mainOl)}>
-          <li {...stylex.props(styles.mainLi)}>
+        <ol {...stylex.props(styles.ol)}>
+          <li {...stylex.props(styles.li)}>
             Get started by editing{" "}
-            <code {...stylex.props(styles.mainCode)}>src/app/page.tsx</code>
+            <code {...stylex.props(styles.code)}>src/app/page.tsx</code>
           </li>
-          <li {...stylex.props(styles.mainLi)}>
+          <li {...stylex.props(styles.li)}>
             Save and see your changes instantly.
           </li>
         </ol>
         <div {...stylex.props(styles.ctas)}>
           <a
-            {...stylex.props(styles.ctasA, styles.linkPrimary)}
+            {...stylex.props(styles.ctaLink, styles.linkPrimary)}
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
@@ -40,7 +40,7 @@ export default function Home() {
             Deploy now
           </a>
           <a
-            {...stylex.props(styles.ctasA, styles.linkSecondary)}
+            {...stylex.props(styles.ctaLink, styles.linkSecondary)}
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
@@ -130,8 +130,8 @@ const styles = stylex.create({
       [MOBILE]: "center",
     },
   },
-  mainOl: {
-    fontFamily: fonts["--font-geist-mono"],
+  ol: {
+    fontFamily: fonts["--geist-mono"],
     paddingLeft: 0,
     margin: 0,
     fontSize: 14,
@@ -143,13 +143,13 @@ const styles = stylex.create({
       [MOBILE]: "center",
     },
   },
-  mainLi: {
+  li: {
     marginBottom: {
       default: 8,
       ":last-of-type": 0,
     },
   },
-  mainCode: {
+  code: {
     fontFamily: "inherit",
     background: colors.grayAlpha100,
     paddingBlock: 2,
@@ -165,7 +165,7 @@ const styles = stylex.create({
       [MOBILE]: "column",
     },
   },
-  ctasA: {
+  ctaLink: {
     appearance: "none",
     borderRadius: 128,
     height: {
@@ -176,7 +176,7 @@ const styles = stylex.create({
       default: 20,
       [MOBILE]: 16,
     },
-    fontFamily: fonts["--font-geist-sans"],
+    fontFamily: fonts["--geist-sans"],
     borderWidth: 1,
     borderStyle: "solid",
     borderColor: "transparent",
@@ -190,7 +190,7 @@ const styles = stylex.create({
       default: 16,
       [MOBILE]: 14,
     },
-    lineHeight: 20,
+    lineHeight: "20px",
     fontWeight: 500,
   },
   linkPrimary: {
@@ -212,7 +212,7 @@ const styles = stylex.create({
     },
   },
   footer: {
-    fontFamily: fonts["--font-geist-sans"],
+    fontFamily: fonts["--geist-sans"],
     gridRowStart: "3",
     display: "flex",
     gap: 24,
